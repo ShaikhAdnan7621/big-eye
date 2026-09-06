@@ -9,7 +9,7 @@
 
 ## Summary
 
-![[Pasted image 20260906160626.png|248]]
+![Alternative Text](Diagrams/Pasted image 20260906160626.png)
 
 
 **Project Big Eye** introduces an edge-native metadata extraction and video analytics layer designed to overlay directly onto Gujarat's existing statewide surveillance infrastructure. Rather than transmitting and storing raw, continuous video feeds at high bandwidth and cost, Big Eye processes video feeds locally near the camera edge. 
@@ -61,8 +61,7 @@ Big Eye operates **alongside existing vendor infrastructure** without requiring 
 
 The primary objective of Project Big Eye is to transform raw, unsearchable video streams into a searchable, long-term intelligence grid.
 
-![[Pasted image 20260906161139.png|700]]
-
+![Alternative Text](Diagrams/Pasted image 20260906161139.png)
 
 ---
 
@@ -80,8 +79,8 @@ Gujarat’s public surveillance system processes continuous video feeds across u
 ## 4. Current System Architecture
 
 The existing surveillance setup uses a standard centralized or local Network Video Recorder (NVR) architecture.
-![[Pasted image 20260906161345.png|700]]
 
+![Alternative Text](Diagrams/Pasted image 20260906161345.png)
 
 In the current setup:
 * Video cameras stream continuous RTSP/HLS feeds over leased lines or municipal fiber.
@@ -107,7 +106,7 @@ In the current setup:
 
 Project Big Eye implements an **Edge-Native Video Analytics and Structured Metadata Intelligence Grid**.
 
-![[Pasted image 20260906161727.png|475]]
+![Alternative Text](Diagrams/Pasted image 20260906161727.png)
 
 ### Core Tenets of the Solution:
 1. **Compute Near the Sensor:** Lightweight edge compute instances process video feeds locally at the edge node or regional aggregation point.
@@ -120,15 +119,14 @@ Project Big Eye implements an **Edge-Native Video Analytics and Structured Metad
 ## 7. High-Level System Architecture
 
 The architecture is divided into three distinct operational tiers:
-
-![[Pasted image 20260906162533.png]]
-
+ 
+![Alternative Text](Diagrams/Pasted image 20260906162533.png)
 
 ---
 
 ## 8. How the Solution Works
-
-![[Pasted image 20260906162633.png|700]]
+ 
+![Alternative Text](Diagrams/Pasted image 20260906162633.png)
 
 1. **Frame Ingestion:** The edge worker establishes a low-latency TCP RTSP link. Incoming frames are validated against presentation timestamps (PTS) to prevent GOP timing drift.
 2. **Inference & Gating:** The frame is resized to standard tensor dimensions ($640\times640$) and evaluated through an FP16-accelerated convolutional backbone. Bounding boxes are filtered through geometric sanity rules (rejecting boxes exceeding 15% of the screen or with abnormal aspect ratios).
@@ -138,8 +136,9 @@ The architecture is divided into three distinct operational tiers:
 ---
 
 ## 9. Why We Chose This Solution
+ 
+![Alternative Text](Diagrams/Pasted image 20260906163352.png)
 
-![[Pasted image 20260906163352.png]] 
 
 * **Preservation of Capital Investment:** Replacing 80,000 cameras or deploying massive centralized compute arrays is cost-prohibitive. Big Eye operates non-intrusively as an overlay.
 * **Resilience Under Network Degradation:** In rural jurisdictions with intermittent network connectivity, edge nodes buffer metadata locally and upload records once the network recovers.
@@ -148,14 +147,15 @@ The architecture is divided into three distinct operational tiers:
 ---
 
 ## 10. Technology Stack
-
-![[Pasted image 20260906163852.png]]
+ 
+![Alternative Text](Diagrams/Pasted image 20260906163852.png)
 
 ---
 
 ## 11. Data Flow Architecture
+ 
 
-![[Pasted image 20260906164406.png|482]]
+![Alternative Text](Diagrams/Pasted image 20260906164406.png)
 
 
 ---
@@ -270,7 +270,8 @@ stateDiagram-v2
 
 Project Big Eye implements a **Hybrid Storage Hierarchy** that balances immediate legal evidentiary requirements with multi-year forensic queryability.
 
-![[Pasted image 20260906164858.png|700]]
+![Alternative Text](Diagrams/Pasted image 20260906164858.png)
+
 ### Storage Efficiency Analysis:
 
 $$\text{Data Reduction Ratio} =$$
@@ -284,8 +285,9 @@ $$4,137\times\text{ to }30,000\times smaller$$
 ---
 
 ## 15. Real-Time Analytics and Search Engine 
+ 
+![Alternative Text](Diagrams/Pasted image 20260906165421.png)
 
-![[Pasted image 20260906165421.png|539]]
 ---
  
 ### Specific Operational Scenarios
@@ -306,12 +308,14 @@ $$4,137\times\text{ to }30,000\times smaller$$
 ## 16. Scalability Architecture
 
 Project Big Eye scales incrementally across thousands of cameras through a distributed edge architecture.
+ 
+![Alternative Text](Diagrams/Pasted image 20260906171408.png)
 
-![[Pasted image 20260906171408.png|700]]
 
 ### Camera Onboarding Lifecycle:
 Onboarding an existing or newly installed camera requires simple configuration:
-![[Pasted image 20260906171509.png]]
+ 
+![Alternative Text](Diagrams/Pasted image 20260906171509.png)
 
 ---
 
@@ -348,8 +352,8 @@ Supabase Synchronization:       100% Ingested with Public Thumbnail Verification
 ---
 
 ## 18. What the Solution Solves
-
-![[Pasted image 20260906171855.png]]
+ 
+![Alternative Text](Diagrams/Pasted image 20260906171855.png)
 ---
 
 ## 19. System Limitations
@@ -362,7 +366,7 @@ Supabase Synchronization:       100% Ingested with Public Thumbnail Verification
 
 ## 20. Future Improvements
 
-![[Pasted image 20260906171922.png]]
+![Alternative Text](Diagrams/Pasted image 20260906171922.png) 
 
 ---
 ## 21. Conclusion
