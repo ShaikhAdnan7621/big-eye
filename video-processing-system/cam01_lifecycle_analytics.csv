@@ -1,0 +1,8 @@
+camera_id,track_id,vehicle_class,dominant_color,motion_state,traffic_flow,net_displacement_px,entry_sec,exit_sec,dwell_sec,thumbnail_file,tamper_hash
+cam01,13,LCV,silver/gray,Moving,Outbound (Exiting Bridge),254.0,13.49,14.53,1.04,./thumbnails/cam01_id13_LCV.jpg,f553ddd2fdf95657
+cam01,12,Hatchback,other,Stationary,Auto-Stand / Parking,3.6,11.73,19.61,7.88,./thumbnails/cam01_id12_Hatchback.jpg,fc3c237b792cc43b
+cam01,14,Sedan,silver/gray,Stationary,Parked / Waiting,1.4,15.53,34.84,19.31,./thumbnails/cam01_id14_Sedan.jpg,22aaeddb1ae2aa8e
+cam01,28,Two-wheeler,green,Moving,Inbound (Towards Bridge),209.6,26.11,34.76,8.65,./thumbnails/cam01_id28_Two-wheeler.jpg,f0d30deb0675c42d
+cam01,12,Hatchback,other,Stationary,Auto-Stand / Parking,3.6,26.95,39.92,12.97,./thumbnails/cam01_id12_Hatchback.jpg,1349fd9c2bc322c7
+cam01,1,Three-wheeler,yellow,Stationary,Parked / Waiting,5.4,0.0,60.04,60.04,./thumbnails/cam01_id1_Three-wheeler.jpg,551c8fa7520dd719
+cam01,31,Hatchback,blue,Stationary,Auto-Stand / Parking,4.5,45.75,59.32,13.57,./thumbnails/cam01_id31_Hatchback.jpg,27b0e09ecec59168

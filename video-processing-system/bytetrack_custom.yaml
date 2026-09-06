@@ -1,0 +1,7 @@
+fuse_score: true
+match_thresh: 0.78
+new_track_thresh: 0.48
+track_buffer: 60
+track_high_thresh: 0.38
+track_low_thresh: 0.12
+tracker_type: bytetrack

@@ -1,0 +1,32 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+
+
+Set-Content -Path .gitignore -Value @"
+# Environment & Secrets
+.env
+.env.*
+
+# Python & Virtual Env
+.venv/
+__pycache__/
+*.pyc
+
+ 
+
+*.pt
+*.pth
+
+# IDE
+.vscode/
+.idea/
+"@
