@@ -41,82 +41,82 @@ mindmap
       Spatial & Attribute Indexing
       Real-Time Event Dispatcher
       Tamper-Evident SHA-256 Ledger
-    Police Command Interface
+      ![Alternative Text](Diagrams/Pasted%20image%2020260906160626.png)
       Natural Language Attribute Query
       Cross-Camera Route Reconstruction
       Live Matrix Monitoring
       Evidentiary Drill-Down
-    Operational Domains
+      ![Alternative Text](Diagrams/Pasted%20image%2020260906161139.png)
       Traffic Management
       Crime Investigation
       Civil Supplies Oversight
       Critical Infrastructure Security
-```
+      ![Alternative Text](Diagrams/Pasted%20image%2020260906161345.png)
 
 Big Eye operates **alongside existing vendor infrastructure** without requiring hardware replacement, camera re-installation, or modifications to current video management systems (VMS).
 
 ---
-
+      ![Alternative Text](Diagrams/Pasted%20image%2020260906161727.png)
 ## 2. Objective
 
 The primary objective of Project Big Eye is to transform raw, unsearchable video streams into a searchable, long-term intelligence grid.
 
-![Alternative Text](<Diagrams/Pasted image 20260906161139.png>)
+      ![Alternative Text](Diagrams/Pasted%20image%2020260906162533.png)
 
 ---
 
 ## 3. Problem Statement
-
+      ![Alternative Text](Diagrams/Pasted%20image%2020260906162633.png)
 Gujarat’s public surveillance system processes continuous video feeds across urban and rural jurisdictions. Managing this scale presents fundamental physical and economic constraints:
 
 1. **The Retention Wall:** Video storage demands are bounded by storage capacity. High-definition camera streams (1080p, H.264/H.265) generate 15–30 GB per camera per day. Across 80,000 endpoints, storing raw footage beyond 7 to 30 days requires unsustainable petabyte-scale storage expansion.
 2. **Post-Retention Information Loss:** When a 30-day retention window closes, the underlying footage is permanently overwritten. Investigations into crimes, frauds, or patterns occurring beyond the retention window start with zero discoverable visual data.
-3. **Manual Investigative Scrubbing:** Investigating an incident across multiple junctions requires officers to manually review hours of static footage across multiple recording units, consuming critical investigation hours.
+      ![Alternative Text](Diagrams/Pasted%20image%2020260906163352.png)
 4. **Network Backhaul Bottlenecks:** Streaming 80,000 live feeds back to central data centers creates high WAN bandwidth demands, causing frame drops, latency, and system degradation during peak traffic.
 
 ---
 
-## 4. Current System Architecture
+      ![Alternative Text](Diagrams/Pasted%20image%2020260906163852.png)
 
 The existing surveillance setup uses a standard centralized or local Network Video Recorder (NVR) architecture.
 
 ![Alternative Text](<Diagrams/Pasted image 20260906161345.png>)
-
+      ![Alternative Text](Diagrams/Pasted%20image%2020260906164406.png)
 In the current setup:
 * Video cameras stream continuous RTSP/HLS feeds over leased lines or municipal fiber.
 * Feeds terminate at district Command and Control Centers (CCC) or local police station NVRs.
 * Operators watch live wall displays, but historical analysis relies on physical review.
-* Storage units automatically delete the oldest footage when hard drives reach capacity.
+      ![Alternative Text](Diagrams/Pasted%20image%2020260906164858.png)
 
 ---
 
 ## 5. Existing Challenges
-
+      ![Alternative Text](Diagrams/Pasted%20image%2020260906165421.png)
 | Operational Area | Current Limitation | Practical Consequence |
 | :--- | :--- | :--- |
 | **Data Retention** | Bounded at 7–30 days. | Cold cases or multi-month financial/civil supply theft cannot be audited retrospectively. |
 | **Search Capabilities** | Camera ID + Timestamp scrubbing only. | Finding a vehicle requires knowing the exact camera and approximate minute it passed. |
-| **Inter-Departmental Silos** | 26 departments run isolated VMS solutions. | Tracking a vehicle across Food Supply godowns, RTO checkpoints, and highway corridors requires manual multi-agency coordination. |
+      ![Alternative Text](Diagrams/Pasted%20image%2020260906171408.png)
 | **Network Infrastructure** | Continuous uncompressed video streaming. | Remote rural checkposts and highway cameras suffer from packet loss and intermittent disconnects. |
 | **Intelligence Extraction** | Human-dependent observation. | 99% of recorded frames contain background asphalt or empty roads, yielding zero operational value. |
 
 ---
-
+      ![Alternative Text](Diagrams/Pasted%20image%2020260906171509.png)
 ## 6. Proposed Solution: Project Big Eye
 
 Project Big Eye implements an **Edge-Native Video Analytics and Structured Metadata Intelligence Grid**.
 
-![Alternative Text](<Diagrams/Pasted image 20260906161727.png>)
+      ![Alternative Text](Diagrams/Pasted%20image%2020260906171855.png)
 
 ### Core Tenets of the Solution:
 1. **Compute Near the Sensor:** Lightweight edge compute instances process video feeds locally at the edge node or regional aggregation point.
 2. **Metadata-First Serialization:** The system extracts structured object profiles (e.g., `Vehicle Class: Three-wheeler`, `Color: Yellow/Green`, `Flow: Inbound`, `Dwell: 14.2s`, `Hash: e8a6cb56`).
-3. **Hybrid Retention Model:** Original video remains on the local NVR for the standard 7–30 day legal retention window. The metadata and contextual thumbnails are transmitted centrally and retained for multi-year indexation.
+      ![Alternative Text](Diagrams/Pasted%20image%2020260906171922.png)
 4. **Forensic Traceability:** If judicial evidence is required, operators drill down from the metadata record directly to the specific camera and timestamp on the local NVR before local overwrite.
 
 ---
 
-## 7. High-Level System Architecture
+      ![Alternative Text](Diagrams/Pasted%20image%2020260906172032.png)
 
 The architecture is divided into three distinct operational tiers:
  
