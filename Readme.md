@@ -9,7 +9,7 @@
 
 ## Summary
 
-![Alternative Text](Diagrams/Pasted image 20260906160626.png)
+![Alternative Text](<Diagrams/Pasted image 20260906160626.png>)
 
 
 **Project Big Eye** introduces an edge-native metadata extraction and video analytics layer designed to overlay directly onto Gujarat's existing statewide surveillance infrastructure. Rather than transmitting and storing raw, continuous video feeds at high bandwidth and cost, Big Eye processes video feeds locally near the camera edge. 
@@ -61,7 +61,7 @@ Big Eye operates **alongside existing vendor infrastructure** without requiring 
 
 The primary objective of Project Big Eye is to transform raw, unsearchable video streams into a searchable, long-term intelligence grid.
 
-![Alternative Text](Diagrams/Pasted image 20260906161139.png)
+![Alternative Text](<Diagrams/Pasted image 20260906161139.png>)
 
 ---
 
@@ -80,7 +80,7 @@ Gujarat’s public surveillance system processes continuous video feeds across u
 
 The existing surveillance setup uses a standard centralized or local Network Video Recorder (NVR) architecture.
 
-![Alternative Text](Diagrams/Pasted image 20260906161345.png)
+![Alternative Text](<Diagrams/Pasted image 20260906161345.png>)
 
 In the current setup:
 * Video cameras stream continuous RTSP/HLS feeds over leased lines or municipal fiber.
@@ -106,7 +106,7 @@ In the current setup:
 
 Project Big Eye implements an **Edge-Native Video Analytics and Structured Metadata Intelligence Grid**.
 
-![Alternative Text](Diagrams/Pasted image 20260906161727.png)
+![Alternative Text](<Diagrams/Pasted image 20260906161727.png>)
 
 ### Core Tenets of the Solution:
 1. **Compute Near the Sensor:** Lightweight edge compute instances process video feeds locally at the edge node or regional aggregation point.
@@ -120,13 +120,13 @@ Project Big Eye implements an **Edge-Native Video Analytics and Structured Metad
 
 The architecture is divided into three distinct operational tiers:
  
-![Alternative Text](Diagrams/Pasted image 20260906162533.png)
+![Alternative Text](<Diagrams/Pasted image 20260906162533.png>)
 
 ---
 
 ## 8. How the Solution Works
  
-![Alternative Text](Diagrams/Pasted image 20260906162633.png)
+![Alternative Text](<Diagrams/Pasted image 20260906162633.png>)
 
 1. **Frame Ingestion:** The edge worker establishes a low-latency TCP RTSP link. Incoming frames are validated against presentation timestamps (PTS) to prevent GOP timing drift.
 2. **Inference & Gating:** The frame is resized to standard tensor dimensions ($640\times640$) and evaluated through an FP16-accelerated convolutional backbone. Bounding boxes are filtered through geometric sanity rules (rejecting boxes exceeding 15% of the screen or with abnormal aspect ratios).
@@ -137,7 +137,7 @@ The architecture is divided into three distinct operational tiers:
 
 ## 9. Why We Chose This Solution
  
-![Alternative Text](Diagrams/Pasted image 20260906163352.png)
+![Alternative Text](<Diagrams/Pasted image 20260906163352.png>)
 
 
 * **Preservation of Capital Investment:** Replacing 80,000 cameras or deploying massive centralized compute arrays is cost-prohibitive. Big Eye operates non-intrusively as an overlay.
@@ -148,14 +148,14 @@ The architecture is divided into three distinct operational tiers:
 
 ## 10. Technology Stack
  
-![Alternative Text](Diagrams/Pasted image 20260906163852.png)
+![Alternative Text](<Diagrams/Pasted image 20260906163852.png>)
 
 ---
 
 ## 11. Data Flow Architecture
  
 
-![Alternative Text](Diagrams/Pasted image 20260906164406.png)
+![Alternative Text](<Diagrams/Pasted image 20260906164406.png>)
 
 
 ---
@@ -270,7 +270,7 @@ stateDiagram-v2
 
 Project Big Eye implements a **Hybrid Storage Hierarchy** that balances immediate legal evidentiary requirements with multi-year forensic queryability.
 
-![Alternative Text](Diagrams/Pasted image 20260906164858.png)
+![Alternative Text](<Diagrams/Pasted image 20260906164858.png>)
 
 ### Storage Efficiency Analysis:
 
@@ -286,14 +286,14 @@ $$4,137\times\text{ to }30,000\times smaller$$
 
 ## 15. Real-Time Analytics and Search Engine 
  
-![Alternative Text](Diagrams/Pasted image 20260906165421.png)
+![Alternative Text](<Diagrams/Pasted image 20260906165421.png>)
 
 ---
  
 ### Specific Operational Scenarios
 
 #### A. Law Enforcement & Criminal Investigation
-* **Suspect Vehicle Trace:** An eyewitness spots a *"black SUV fleeing towards Paldi Circle"*. Investigators run an attribute query across neighboring camera nodes, retrieving matching vehicle profiles, cropped thumbnails, and passage timestamps within seconds.
+* **Suspect Vehicle Trace:** An eyewitness spots a *"black SUV fleeing towards Paldi Circle"*. Investigators run an attribute query across neighboring camera nodes, retrieving matching vehicle pr[...]
 * **Automated Alerts:** High-priority registration numbers or visual profiles on a watchlist trigger instant desktop and mobile notifications when detected at any camera node.
 
 #### B. Traffic Flow Optimization
@@ -309,13 +309,13 @@ $$4,137\times\text{ to }30,000\times smaller$$
 
 Project Big Eye scales incrementally across thousands of cameras through a distributed edge architecture.
  
-![Alternative Text](Diagrams/Pasted image 20260906171408.png)
+![Alternative Text](<Diagrams/Pasted image 20260906171408.png>)
 
 
 ### Camera Onboarding Lifecycle:
 Onboarding an existing or newly installed camera requires simple configuration:
  
-![Alternative Text](Diagrams/Pasted image 20260906171509.png)
+![Alternative Text](<Diagrams/Pasted image 20260906171509.png>)
 
 ---
 
@@ -353,7 +353,7 @@ Supabase Synchronization:       100% Ingested with Public Thumbnail Verification
 
 ## 18. What the Solution Solves
  
-![Alternative Text](Diagrams/Pasted image 20260906171855.png)
+![Alternative Text](<Diagrams/Pasted image 20260906171855.png>)
 ---
 
 ## 19. System Limitations
@@ -366,7 +366,7 @@ Supabase Synchronization:       100% Ingested with Public Thumbnail Verification
 
 ## 20. Future Improvements
 
-![Alternative Text](Diagrams/Pasted image 20260906171922.png) 
+![Alternative Text](<Diagrams/Pasted image 20260906171922.png>) 
 
 ---
 ## 21. Conclusion
